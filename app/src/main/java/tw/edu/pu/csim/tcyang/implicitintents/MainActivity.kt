@@ -12,17 +12,16 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import tw.edu.pu.csim.tcyang.implicitintents.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: tw.edu.pu.csim.tcyang.implicitintents.databinding.ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = tw.edu.pu.csim.tcyang.implicitintents.databinding.ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
@@ -32,8 +31,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "子青老師FB", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+            var it = Intent(Intent.ACTION_VIEW)
+            it.data = Uri.parse("https://www.facebook.com/tcyang1971")
+            startActivity(it)
         }
     }
 
