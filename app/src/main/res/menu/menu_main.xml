@@ -2,9 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="tw.edu.pu.csim.tcyang.implicitintents.MainActivity">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+
+    <item android:id="@+id/web" android:title="子青老師網頁"></item>
+    <item android:id="@+id/email" android:title="寄信給子青老師"></item>
+    <item android:id="@+id/search" android:title="搜尋楊子青"></item>
+    <item android:id="@+id/map" android:title="根據靜宜大學GPS座標，顯示地圖"></item>
+
 </menu>
